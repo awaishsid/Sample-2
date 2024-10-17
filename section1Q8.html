@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: rgb(228, 89, 89);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .form-container {
+            background-color: white;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            width: 375px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 7px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="url"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 5px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 7px;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin-right: 5px;
+        }
+
+        input[type="submit"] {
+            background-color: green;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            width: 25%;
+            margin-left: 35%;
+        }
+
+        input[type="submit"]:hover {
+            background-color: rgb(111, 219, 111);
+        }
+
+        .required {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Feedback Form</h2>
+
+    <div class="form-container">
+        <form>
+            <label for="feedback-type">Feedback Type:</label>
+            <select id="feedback-type">
+                <option>Compliment</option>
+                <option>Suggestion</option>
+                <option>Complaint</option>
+            </select>
+
+            <label for="message">Message:</label>
+            <textarea id="message" rows="4"></textarea>
+
+            <label>Website Rating:</label>
+            <input type="radio" name="rating"> <strong>Excellent
+            <input type="radio" name="rating"> Good
+            <input type="radio" name="rating"> Average
+            <input type="radio" name="rating"> Poor</strong>
+
+            <label for="age">Age (10-100):</label>
+            <input type="text" id="age">
+
+            <label for="email">Email <span class="required">*</span>:</label>
+            <input type="email" id="email">
+
+            <label for="password">Password (min. 8 characters):</label>
+            <input type="password" id="password" minlength="8" required>
+
+            <label for="url">Website URL (optional):</label>
+            <input type="url" id="url">
+
+            <label><input type="checkbox"> I agree to the terms and conditions</label>
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+</body>
+</html>
