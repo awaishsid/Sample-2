@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styled Table</title>
+    <style>
+        table {
+            width: 80%;
+            margin: 0 auto;
+            border-collapse: collapse;
+            text-align: left;
+        }
+
+        table, th, td {
+            border: 1px solid black;
+        }
+
+        th, td {
+            padding: 12px 15px;
+        }
+
+        th {
+            background-color: green;
+            font-weight: bold;
+
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        tr:nth-child(odd) {
+            background-color: #fff;
+        }
+
+        tr:hover {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+<body>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Product Name</th>
+                <th>Quantity</th>
+                <th>Price Per Unit</th>
+                <th>Description</th>
+                <th>Total Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Product 1</td>
+                <td>2</td>
+                <td>$10</td>
+                <td>This is Product 1</td>
+                <td><b>$20</b></td>
+            </tr>
+            <tr>
+                <td>Product 2</td>
+                <td>3</td>
+                <td>$20</td>
+                <td>This Product 2</td>
+                <td><b>$60</b></td>
+            </tr>
+            <tr>
+                <td colspan="4"><b>Sum</b></td>
+                <td><b>$80</b></td>
+                </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>
